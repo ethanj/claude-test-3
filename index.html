@@ -17,19 +17,24 @@
                     <li><a href="#contact">Contact</a></li>
                 </ul>
             </nav>
+            <button id="theme-toggle" aria-label="Toggle dark mode">
+                <span class="light-icon">☀️</span>
+                <span class="dark-icon">🌙</span>
+            </button>
         </header>
         <main>
             <h1>Welcome to Our Test Page</h1>
-            <p>This is an enhanced version of our test page, now with more features and better styling!</p>
+            <p>This is an enhanced version of our test page, now with dark mode support!</p>
             
             <section id="about">
                 <h2>About This Project</h2>
-                <p>This project demonstrates a clean, modern web design with responsive features and smooth animations.</p>
+                <p>This project demonstrates a clean, modern web design with responsive features, smooth animations, and theme switching.</p>
             </section>
 
             <section id="features" class="features">
                 <h2>Key Features</h2>
                 <ul>
+                    <li>Dark mode support with smooth transitions</li>
                     <li>Responsive navigation menu</li>
                     <li>Clean and modern design</li>
                     <li>Proper HTML5 semantic structure</li>
@@ -48,5 +53,16 @@
             <p>Created with Claude - 2025</p>
         </footer>
     </div>
+    <script>
+        document.getElementById('theme-toggle').addEventListener('click', function() {
+            document.body.classList.toggle('dark-mode');
+            localStorage.setItem('dark-mode', document.body.classList.contains('dark-mode'));
+        });
+
+        // Check for saved theme preference
+        if (localStorage.getItem('dark-mode') === 'true') {
+            document.body.classList.add('dark-mode');
+        }
+    </script>
 </body>
 </html>

@@ -21,7 +21,7 @@ body {
 }
 
 header {
-    background: #333;
+    background: linear-gradient(to right, #333, #444);
     color: white;
     padding: 1rem;
     margin-bottom: 2rem;
@@ -38,6 +38,13 @@ nav ul {
 nav a {
     color: white;
     text-decoration: none;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    transition: background-color 0.3s;
+}
+
+nav a:hover {
+    background-color: rgba(255,255,255,0.1);
 }
 
 h1 {
@@ -49,4 +56,29 @@ h1 {
 p {
     color: #666;
     margin-bottom: 1rem;
+}
+
+.features {
+    margin: 2rem 0;
+    padding: 1rem;
+    background-color: #f8f8f8;
+    border-radius: 4px;
+}
+
+.features ul {
+    list-style: inside;
+    margin-left: 1rem;
+}
+
+.features li {
+    margin: 0.5rem 0;
+    color: #555;
+}
+
+footer {
+    text-align: center;
+    margin-top: 2rem;
+    padding-top: 1rem;
+    border-top: 1px solid #eee;
+    color: #888;
 }
